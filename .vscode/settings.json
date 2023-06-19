@@ -1,0 +1,36 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "node_modules": true
+  },
+  "cSpell.words": [
+    "Ghipps",
+    "Legon",
+    "Toastification"
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#DDAA33",
+    "activityBar.activeBorder": "#dce0e4",
+    "activityBar.background": "#DDAA33",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#dce0e4",
+    "activityBarBadge.foreground": "#15202b",
+    "sash.hoverBorder": "#DDAA33",
+    "statusBarItem.hoverBackground": "#DDAA3399",
+    "statusBarItem.remoteBackground": "#DDAA33",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#DDAA33",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#DDAA3399",
+    "titleBar.inactiveForeground": "#e7e7e799",
+    "commandCenter.border": "#e7e7e799"
+  },
+  "peacock.color": "DDAA33",
+  "azdoPullRequests.projectName": "exxtra-admin",
+  "azdoPullRequests.orgUrl": "https://dev.azure.com/sproutedigital"
+}
