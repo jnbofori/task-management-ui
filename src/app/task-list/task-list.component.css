@@ -15,6 +15,11 @@ button {
   max-height: 80vh;
 }
 
+.task-title {
+  display: flex;
+  align-items: center;
+}
+
 .task-item {
   line-height: 2;
   margin: 20px 0px;
@@ -54,6 +59,13 @@ button {
 
 .greyed {
   color: #9E9E9E;
+}
+
+.task-description {
+  white-space: nowrap; 
+  overflow: hidden;
+  width: 25vw;
+  text-overflow: ellipsis;
 }
 
 .no-data {

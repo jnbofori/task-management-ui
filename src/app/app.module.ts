@@ -12,6 +12,11 @@ import { TaskListComponent } from './task-list/task-list.component';
 import { TaskFormComponent } from './task-form/task-form.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { UpdateTaskComponent } from './update-task/update-task.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { BadgePillComponent } from './badge-pill/badge-pill.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +27,18 @@ import { UpdateTaskComponent } from './update-task/update-task.component';
     TaskFormComponent,
     UpdateTaskComponent,
     PageNotFoundComponent,
+    BadgePillComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NoopAnimationsModule,
+
+    MatChipsModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

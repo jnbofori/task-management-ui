@@ -92,4 +92,13 @@ export class TaskListComponent implements OnInit {
       timer = setTimeout(() => { func.apply(this, args); }, timeout);
     };
   }
+
+  getVariant(status: string) {
+    if (status === 'completed') {
+      return 'success'
+    } else if (status === 'pending') {
+      return 'warning'
+    }
+    return 'neutral'
+  }
 }

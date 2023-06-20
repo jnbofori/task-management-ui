@@ -18,23 +18,21 @@
   <div *ngFor="let task of tasks" class="task-item">
     <div>
       <div [routerLink]="['/tasks', task._id]">
-        <div class="users-name">
-            {{ task.title }}
+        <div class="task-title">
+          <div class="users-name">
+              {{ task.title }}
+          </div>
+          <app-badge-pill [text]="task.status" [variant]="getVariant(task.status)"></app-badge-pill>
         </div>
-        <div class="greyed">
+
+        <div class="greyed task-description">
           {{ task.description }}
         </div>
       </div>
     
       <div>
-        <div class="tooltip"> 
-          <fa-icon [icon]="faCalendarCheck" class="complete-icon" size="lg" (click)="completeTask(task._id)"></fa-icon>
-          <span class="tooltiptext">Complete</span>
-        </div>
-        <div class="tooltip">
-          <fa-icon [icon]="faTrash" class="trash-icon" size="lg" (click)="delete(task._id)"></fa-icon>
-          <span class="tooltiptext">Delete</span>
-        </div>
+        <fa-icon matTooltip="Complete task" [icon]="faCalendarCheck" class="complete-icon" size="lg" (click)="completeTask(task._id)"></fa-icon>
+        <fa-icon matTooltip="Delete" [icon]="faTrash" class="trash-icon" size="lg" (click)="delete(task._id)"></fa-icon>
       </div>
     </div>
 

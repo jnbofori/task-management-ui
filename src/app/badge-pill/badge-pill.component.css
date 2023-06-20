@@ -1,0 +1,8 @@
+.badge-pill {
+  color: black;
+  border-radius: 25px;
+  padding: 0 10px;
+  margin-left: 15px;
+  text-align: center;
+  font-size: small;
+}
