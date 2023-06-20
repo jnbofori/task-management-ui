@@ -1,0 +1,11 @@
+.alert > div {
+  color: red;
+}
+
+.alert {
+  margin-bottom: 25px;
+}
+
+.button {
+  float: right;
+}

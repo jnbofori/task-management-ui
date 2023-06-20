@@ -46,4 +46,9 @@ export class ApiService {
     const url = `${API_HOST}/tasks/${taskId}`;
     return this.http.delete(url, this.httpOptions);
   }
+
+  completeTask(taskId: string) {
+    const url = `${API_HOST}/tasks/complete/${taskId}`;
+    return this.http.post(url, this.httpOptions);
+  }
 }

@@ -1,0 +1,7 @@
+<h1>Update Task</h1>
+
+<app-task-form
+  *ngIf="task"
+  [task]="task"
+  (formDataEvent)="updateTask($event)">
+</app-task-form>

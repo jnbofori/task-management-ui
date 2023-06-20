@@ -1,0 +1,48 @@
+<div class="title">
+  <fa-icon [icon]="faWrench" size="2x"></fa-icon>
+  <h1>Task Manager</h1>
+</div>
+
+<div class="task-action">
+  <h2>Tasks</h2>
+  <button type="button" routerLink="/tasks/new">
+    <fa-icon [icon]="faPlus" class="plus-icon"></fa-icon> Add Task
+  </button>
+</div>
+
+<div>
+  <input id="search" type="text" placeholder="Search" [formControl]="search" (input)="debouncedFetchTasks()">
+</div>
+
+<div *ngIf="tasks && tasks.length; else noTasks" class="task-list">
+  <div *ngFor="let task of tasks" class="task-item">
+    <div>
+      <div [routerLink]="['/tasks', task._id]">
+        <div class="users-name">
+            {{ task.title }}
+        </div>
+        <div class="greyed">
+          {{ task.description }}
+        </div>
+      </div>
+    
+      <div>
+        <div class="tooltip"> 
+          <fa-icon [icon]="faCalendarCheck" class="complete-icon" size="lg" (click)="completeTask(task._id)"></fa-icon>
+          <span class="tooltiptext">Complete</span>
+        </div>
+        <div class="tooltip">
+          <fa-icon [icon]="faTrash" class="trash-icon" size="lg" (click)="delete(task._id)"></fa-icon>
+          <span class="tooltiptext">Delete</span>
+        </div>
+      </div>
+    </div>
+
+    <hr class="greyed"/>
+  </div>
+</div>
+
+<ng-template #noTasks class="no-data">
+  <h2>No Tasks Found</h2>
+  <div>No tasks to display</div>
+</ng-template>

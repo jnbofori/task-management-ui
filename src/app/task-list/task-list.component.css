@@ -1,0 +1,62 @@
+button {
+  border-radius: 5px;
+}
+
+.users-name {
+  color: black !important;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.task-list {
+  background-color: #F5F5F5;
+  padding: 5px 20px;
+  overflow-y: auto;
+  max-height: 80vh;
+}
+
+.task-item {
+  line-height: 2;
+  margin: 20px 0px;
+  cursor: pointer;
+}
+
+.task-item > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.plus-icon {
+  margin-right: 6px;
+}
+
+.trash-icon {
+  color: #D52416;
+}
+
+.complete-icon {
+  color: #388E3C;
+  margin-right: 8px;
+}
+
+.greyed {
+  color: #9E9E9E;
+}
+
+.no-data {
+  display: flex;
+  flex-direction: column;
+}
