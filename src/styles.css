@@ -2,7 +2,6 @@
 
 * {
   font-family: 'Roboto', Arial, sans-serif;
-  /* color: #616161; */
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -17,10 +16,6 @@ body {
   flex-direction: row;
 }
 
-/* router-outlet + *  {
-  padding: 0 16px;
-} */
-
 /* Text */
 
 h1 {
@@ -34,10 +29,6 @@ h2 {
 h4 {
   font-size: 18px;
 }
-
-/* h1, h2 {
-  font-weight: lighter;
-} */
 
 
 h1 {

@@ -6,14 +6,6 @@
   <div *ngIf="description?.errors?.['minlength']">
     Description must be at least 2 characters long.
   </div>
-
-  <div *ngIf="title?.errors?.['pattern']">
-    Invalid title
-  </div>
-
-  <div *ngIf="description?.errors?.['pattern']">
-    Invalid description
-  </div>
 </div>
 
 <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
