@@ -9,3 +9,9 @@
 .button {
   float: right;
 }
+
+.status-select {
+  width: 50%;
+  height: 35px;
+  margin-bottom: 10px;
+}

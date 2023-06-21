@@ -12,14 +12,28 @@ export class BadgePillComponent {
   get backgroundColor() { 
     switch(this.variant) {
       case 'success':
-        return '#DCEDC8'
+        return 'rgba(40, 199, 111, 0.12)'
       case 'warning':
-        return '#FFCC80'
+        return 'rgb(255,159,67, 0.12)'
       case 'error':
-        return '#FF8A80'
+        return 'rgba(234, 84, 85, 0.12)'
       case 'neutral':
       default:
-        return '#777'
+        return 'rgba(20, 79, 106, 0.12)'
+    }
+  }
+
+  get textColor() { 
+    switch(this.variant) {
+      case 'success':
+        return '#28c76f'
+      case 'warning':
+        return '#ff9f43'
+      case 'error':
+        return '#ea5455'
+      case 'neutral':
+      default:
+        return '#144F6A'
     }
   }
 }

@@ -5,8 +5,8 @@ import { ApiService } from '../api.service';
 import { FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { NotifyService } from '../notify.service';
-import { faTrash, faPlus, faWrench } from '@fortawesome/free-solid-svg-icons';
-import { faCheckCircle, faCalendarCheck } from '@fortawesome/free-regular-svg-icons';
+import { faPlus, faWrench } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt, faCalendarCheck } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-task-list',
@@ -15,9 +15,8 @@ import { faCheckCircle, faCalendarCheck } from '@fortawesome/free-regular-svg-ic
 })
 export class TaskListComponent implements OnInit {
   faWrench = faWrench;
-  faTrash = faTrash;
   faPlus = faPlus;
-  faCheckCircle = faCheckCircle;
+  faTrashAlt = faTrashAlt;
   faCalendarCheck =faCalendarCheck
 
   tasks!: Task[];
@@ -103,8 +102,6 @@ export class TaskListComponent implements OnInit {
   getVariant(status: string) {
     if (status === 'completed') {
       return 'success'
-    } else if (status === 'pending') {
-      return 'warning'
     }
     return 'neutral'
   }

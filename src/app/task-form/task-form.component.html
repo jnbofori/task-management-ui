@@ -17,11 +17,8 @@
 </div>
 
 <form [formGroup]="taskForm" (ngSubmit)="onSubmit()">
-  <div>
     <input id="title" type="text" formControlName="title" placeholder="Title">
-  </div>
 
-  <div>
     <textarea
       id="description"
       formControlName="description"
@@ -29,7 +26,14 @@
       rows="4"
       placeholder="Add a description for the task here...">
     </textarea>
-  </div>
 
-  <button [disabled]="taskForm.invalid" class="button" type="submit">{{ task ? 'Update' : 'Add' }}</button>
+    <div *ngIf="task && task.status">
+      <select formControlName="status" class="status-select">
+        <option *ngFor="let status of statusOptions" [ngValue]="status.value">
+          {{ status.viewValue }}
+        </option>
+      </select>
+    </div>
+
+    <button [disabled]="taskForm.invalid" class="button" type="submit">{{ task ? 'Update' : 'Add' }}</button>
 </form>

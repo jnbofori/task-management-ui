@@ -37,8 +37,8 @@
       </div>
     
       <div>
-        <fa-icon *ngIf="task.status !== 'completed'" matTooltip="Complete task" [icon]="faCalendarCheck" class="complete-icon" size="lg" (click)="completeTask(task._id)"></fa-icon>
-        <fa-icon matTooltip="Delete" [icon]="faTrash" class="trash-icon" size="lg" (click)="delete(task._id)"></fa-icon>
+        <fa-icon *ngIf="task.status !== 'completed'" matTooltip="Mark as complete" [icon]="faCalendarCheck" class="complete-icon" (click)="completeTask(task._id)"></fa-icon>
+        <fa-icon matTooltip="Delete" [icon]="faTrashAlt" class="trash-icon" (click)="delete(task._id)"></fa-icon>
       </div>
     </div>
 
