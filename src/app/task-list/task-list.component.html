@@ -11,6 +11,12 @@
 </div>
 
 <div>
+  <div class="filter">
+    <div style="margin-right: 5px;">Filter by status:</div>
+    <mat-chip-listbox [(ngModel)]="status" (ngModelChange)="debouncedFetchTasks()">
+      <mat-chip-option *ngFor="let option of statusOptions" [value]="option.value">{{option.viewValue}}</mat-chip-option>
+    </mat-chip-listbox>
+  </div>
   <input id="search" type="text" placeholder="Search" [formControl]="search" (input)="debouncedFetchTasks()">
 </div>
 
@@ -31,7 +37,7 @@
       </div>
     
       <div>
-        <fa-icon matTooltip="Complete task" [icon]="faCalendarCheck" class="complete-icon" size="lg" (click)="completeTask(task._id)"></fa-icon>
+        <fa-icon *ngIf="task.status !== 'completed'" matTooltip="Complete task" [icon]="faCalendarCheck" class="complete-icon" size="lg" (click)="completeTask(task._id)"></fa-icon>
         <fa-icon matTooltip="Delete" [icon]="faTrash" class="trash-icon" size="lg" (click)="delete(task._id)"></fa-icon>
       </div>
     </div>

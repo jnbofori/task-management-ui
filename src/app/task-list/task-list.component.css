@@ -72,3 +72,15 @@ button {
   display: flex;
   flex-direction: column;
 }
+
+.select-custom {
+  height: 38px !important;
+  width: 30%;
+  margin-right: 5px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}

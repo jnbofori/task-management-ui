@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +16,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatChipsModule } from '@angular/material/chips';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { BadgePillComponent } from './badge-pill/badge-pill.component';
 
 @NgModule({
@@ -30,6 +32,7 @@ import { BadgePillComponent } from './badge-pill/badge-pill.component';
     BadgePillComponent,
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
@@ -38,7 +41,9 @@ import { BadgePillComponent } from './badge-pill/badge-pill.component';
     NoopAnimationsModule,
 
     MatChipsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatSelectModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -26,6 +26,11 @@ export class TaskFormComponent implements OnInit {
         title: this.task.title,
         description: this.task.description
       })
+
+      if (this.task.status === 'completed') {
+        this.taskForm.controls['title'].disable();
+        this.taskForm.controls['description'].disable();
+      }
     }
   }
 

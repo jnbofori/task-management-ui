@@ -21,8 +21,14 @@ export class TaskListComponent implements OnInit {
   faCalendarCheck =faCalendarCheck
 
   tasks!: Task[];
+  status: any;
 
   search = new FormControl('');
+
+  statusOptions: { value: string, viewValue: string }[] = [
+    {value: 'pending', viewValue: 'Pending'},
+    {value: 'completed', viewValue: 'Completed'},
+  ];
 
   debouncedFetchTasks = this.debounce(() => this.fetchTasks());
 
@@ -36,11 +42,11 @@ export class TaskListComponent implements OnInit {
   }
 
   fetchTasks() {
-    this.apiService.getTasks(this.search.value as string).subscribe({
+    this.apiService.getTasks({ search: this.search.value, status: this.status }).subscribe({
       next: (response) => {
         this.tasks = response;
       },
-      error: (e) => { this.notifyService.notifyError(e.message); },
+      error: (e) => { this.notifyService.notifyError(e.error); console.log({e}) },
     });
   }
 
@@ -50,6 +56,7 @@ export class TaskListComponent implements OnInit {
         error: (e) => { this.notifyService.notifyError(e.error)  },
         complete: () => {
           this.notifyService.notifySuccess('Task completed successfully')
+          this.debouncedFetchTasks();
         }
       }
     );

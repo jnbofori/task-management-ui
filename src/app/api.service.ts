@@ -19,11 +19,15 @@ export class ApiService {
   constructor(private http: HttpClient) {
   }
 
-  getTasks(search: string = "") {
+  getTasks(query: Record<string, any>) {
     let url = `${API_HOST}/tasks`;
-    if (search) {
-      url = `${url}?search=${search}`
+
+    if (Object.keys(query).length) {
+      Object.keys(query).forEach(key => !query[key] && delete query[key])
+      const queryString = '?' + new URLSearchParams(query).toString();
+      url = `${url}${queryString}`
     }
+
     return this.http.get<Task[]>(url, this.httpOptions);
   }
 
