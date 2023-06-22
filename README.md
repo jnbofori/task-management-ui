@@ -1,4 +1,4 @@
-# PhonebookUiNg
+# Task Management UI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.0.
 Which requires a minimum of v16.13 Node.js version.
