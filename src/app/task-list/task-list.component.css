@@ -20,6 +20,13 @@ button {
   align-items: center;
 }
 
+.task-title > div {
+  white-space: nowrap; 
+  overflow: hidden;
+  max-width: 20vw;
+  text-overflow: ellipsis;
+}
+
 .task-item {
   line-height: 2;
   margin: 20px 0px;
